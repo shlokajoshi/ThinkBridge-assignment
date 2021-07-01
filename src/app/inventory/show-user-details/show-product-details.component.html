@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="column" *ngFor="let details of productDetails">
+    <div class="card">
+      <h3>{{ details.productName }}</h3>
+      <p>Product Description: {{ details.productDescription }}</p>
+      <p>Price: {{ details.price }}</p>
+      <button type="button" (click)="updateItem(details.id)">Update</button>
+      <button type="button" (click)="deleteItem(details.id)">Delete</button>
+    </div>
+  </div>
+</div>
