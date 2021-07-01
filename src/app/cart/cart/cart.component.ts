@@ -14,6 +14,8 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getDetailsData().subscribe((data) => {
       this.data = data
+    },(error)=>{
+      console.log(error);
     });    
   }
 
